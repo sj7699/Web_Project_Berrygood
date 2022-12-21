@@ -1,0 +1,77 @@
+aside, section{
+
+    height: 700px;
+}
+
+aside{
+    background-color: #e2e2e2;
+    width:25%;
+    height:1200px;
+    padding-top:50px;
+    float:left;
+}
+
+section{
+    background-color: rgb(255, 255, 255);
+    width:75%;
+    height : 1200px;
+    float:right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#mypage-category{
+    height: 100% ; display: table-cell; vertical-align: middle; /*세로 정렬*/
+    width: 500px; /*가로정렬*/ text-align: center;
+}
+
+#category-order, #category-inquiry, #category-modify, #category-withdrawal{ /*각 메뉴마다 따로 padding 줌*/
+    font-size: 25px;
+    padding:10px;
+}
+
+#mypage-category a:active{
+    text-decoration: underline;
+}
+#mypage-category a:hover{
+    color:#f0a00b;
+}
+.order{
+    padding:20px;
+}
+.orderNum{
+    color:black;
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom:10px;
+}
+.orderDate{
+    color:gray;
+    margin-bottom:10px;
+}
+.orderImg{
+    object-fit: cover;
+    float:left;
+    width:150px;
+    height:150px;
+    margin-right : 20px;
+}
+.orderState{
+    color:gray
+}
+.detailBtn{
+    width:150px;
+    padding:10px;
+    margin-top : 20px;
+    color: #FFF;
+    font-weight :bold;
+    border : 0px solid black;
+    transition: all 0.2s ;
+    background: gray;
+}
+.detailBtn:hover{
+    background-color:black
+
+}

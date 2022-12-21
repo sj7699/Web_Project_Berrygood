@@ -1,0 +1,122 @@
+#purchase{
+    width:400px;
+    height:570px;
+    border-radius: 10px; 
+    object-fit:cover;
+}
+#proinfo{
+    width:1200px;
+    margin:auto;
+}
+.layout{
+    width:1600px;
+    max-width:1000px;
+    margin:100px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.productInfo{
+    width:400px;
+    height:550px;
+    margin-left:10px;
+    border-radius:10px;
+    padding-top:20px;
+    padding-left:50px;
+    padding-right:50px;
+    text-align:left;
+}
+.detail{
+    margin:25px;
+    font-size:12px;
+}
+.count{
+    background-color: #FFFFFF;
+    border-radius:20px;
+    text-align:center;
+}
+.btn{
+    border-radius:10px;
+    border:0px solid black;
+    font-size:30px;
+    margin : 20px;
+    width:40px;
+    height:40px;
+}
+.btn2{
+    width:150px;
+    padding:15px;
+    margin : 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #FFF;
+    font-weight :bold;
+    border : 0px solid black;
+    transition: all 0.2s ;
+    background: gray;
+}
+.btn2:hover{
+    background-color:black
+
+}
+.bottom{
+    min-width:500px;
+    margin:30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align:left;
+
+}
+.idAndDate{
+    display:flex;
+    justify-content: space-between;
+}
+.commentPadding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.star{
+    color:#FFD400
+}
+.title{
+    padding-left: 20px;
+}
+.detailInfo{
+    font-size:40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.detailInfo2{
+    font-size:60px;
+    font-weight: bold;
+}
+.detailInfo3{
+    font-size:80px;
+    color:#FFD400;
+    font-weight: bold;
+}
+.detailInfo4{
+    font-size:80px;
+    color:greenyellow;
+
+    font-weight: bold;
+}
+.detailInfo5{
+    font-size:70px;
+    color:gray;
+    font-weight: bold;
+}
+.image2{
+    display:flex;
+    width:1100px;
+    margin:auto;
+    margin-bottom:50px;
+    justify-content: center;
+}
+.image2 img{
+    object-fit: cover;
+    width : 550px;
+}
+.back{
+    object-fit: cover;
+}

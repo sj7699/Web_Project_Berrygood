@@ -1,0 +1,244 @@
+/*@font-face {
+    font-family: 'ulsanjunggu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @media screen and (max-width:700px){ /*스크린 크기 700px까지는 아래 css코드 사용*/
+    #navbar{
+        padding:10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }   
+    #navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    #navbar-icon{
+        width: 100%;
+        position: relative;
+        left: 45%;
+        top:50%;
+    }
+    #navbar-login{
+        position: relative;
+        left: 40%;
+        top:50%;
+
+    }
+}
+
+
+#titlebar { /*제목(베리 굿,제주)*/
+  text-align: center;
+  background-color: white;
+  margin:0px;
+  border:0px;
+}
+
+#navbar { /*메뉴바*/
+    display: flex; /*세로 -> 가로*/
+    justify-content: space-between; /*박스 사이 공간*/
+    align-items: center; /*가운데 정렬*/
+    background-color:white;
+    border: 1px solid #d3d3d3;
+  
+ 
+    position:sticky; /*메뉴바 sticky*/
+    top:0px; /*sticky 시작 지점*/
+    z-index: 3; /*우선순위 1*/
+  }
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    margin:0px;
+    font-family: 'Hahmlet-Regular';
+}
+
+#navbar-icon{ /*메뉴바의 첫번째 icon*/
+    font-size:25px;
+    width:15%;
+    margin-left:20px;
+    text-align: left;
+}
+
+#navbar-menu{ /*메뉴바의 두번째 (소개, 제품, 게시판)*/
+    list-style:none;
+    display: flex;
+    margin: 0px;
+}
+
+#navbar-menu li{
+    font-size:18px;
+    padding: 20px;
+
+}
+
+#navbar-menu li a:hover{ /*마우스 올려두면 회색*/
+  color:#d3d3d3;
+}
+
+#navbar-login a:hover{
+  color:#d3d3d3;
+  }
+
+
+#navbar-login{ /*메뉴바의 세번째 (로그인/로그아웃)*/
+    list-style:none;
+    width: 15%;
+    font-size:18px;
+    margin-right:20px;
+    text-align: right;
+}
+
+#introduce-image{ /*슬라이드 하단의 광고문구*/
+  text-align: center;
+  margin-top: 20px;
+}
+
+#video{
+  width:"720";
+  height: "480";
+  display:block;
+  margin:20px auto;
+}
+
+#introduce1{
+  /*background-image: url("ex.jpg");*/
+  background-color: rgb(236, 248, 192);
+  /*rgb(236, 248, 192);*/
+  width:100%;
+  height:1000px;
+  text-align: center;
+  padding-top:12px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+#introduce1 p{
+  font-size:40px;
+
+}
+
+
+
+#introduce2, #introduce3, #introduce4{
+  display: flex; 
+  margin-top:70px;
+  justify-content: center; /*fst와 sec를 가운데 정렬함*/
+  /*flex-wrap: wrap; /*화면의 크기를 줄이면 fst와 sec가 세로로 정렬*/
+  height: 350px;
+}
+
+#introduce2 #fst, #introduce4 #product-image{ 
+  border-radius: 50%;
+  width:300px;
+  height:300px;
+  margin-right:15px;
+}
+
+#introduce2 #sec, #introduce4 #product-explain{ /*가운데 정렬*/
+  margin-left: 15px;
+  /*transform: translateY(10%);*/
+}
+
+#introduce2 #sec h2, #introduce4 #product-explain h2{
+  font-size: 30px;
+  margin-bottom:0px;
+}
+
+#introduce2 #sec h3, #introduce4 #product-explain h3{
+  margin-top:10px;
+  font-size: 22px;
+  color:#a8a8a8;
+}
+
+
+
+/*~*/
+
+
+#introduce3 #mark{
+  border-radius: 50%;
+  border: 1px solid #d3d3d3;
+  width:300px;
+  height:300px;
+  margin-left:15px;
+}
+
+#introduce3 #mark2{ /*가운데 정렬*/
+  margin-right: 15px;
+  /*transform: translateY(10%);*/
+
+}
+
+#introduce3 #mark2 h2{
+  font-size: 30px;
+  margin-bottom:0px;
+}
+
+#introduce3 #mark2 h3{
+  margin-top:10px;
+  font-size: 22px;
+  color:#a8a8a8;
+}
+.int{
+  margin:5px;
+  font-size:25px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/*
+.first_cat{
+    font-size: 20px;
+  }
+  
+  .notice{
+    margin-left: 10px;
+    width:49%;
+    height:300px;
+    border:1px solid green;
+    float:left;
+    margin-right:10px;
+  }
+  .gallery{
+    width:48%;
+    height:300px;
+    border:1px solid green;
+    float:left;
+  }
+  
+  .sec_cat{
+    font-size:20px;
+    margin-top:10px;
+  }
+  .tel{
+    margin-left: 10px;
+    width:32%;
+    height:200px;
+    border:1px solid green;
+    float:left;
+  }

@@ -1,0 +1,143 @@
+<html> <!--12월 21일까지-->
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--모든 장치에서 웹 사이트가 잘 보이도록 뷰포트 설정-->
+        <meta name="format-detection" content="telephone=no">
+        <!--아이폰에서 숫자를 전화번호로 자동인식하여 자동링크가 걸리는 것 제거-->
+
+        <link rel="stylesheet" type="text/css" href="mainpage.css">
+        <link rel="stylesheet" type="text/css" href="mypage.css"> <!--mypage css연결-->
+
+        <!--ex.css 적용-->
+
+        <script src="https://kit.fontawesome.com/47f0662df2.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ffe2c27fc384c26308c2fe03a9da522"></script> <!--kakao map api 불러오기-->
+        
+        <title>배리 굿</title> <!--타이틀바-->
+        <style>
+            #modal.modal-overlay {
+                width: 3000px;
+                height: 1000px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(1.5px);
+                -webkit-backdrop-filter: blur(1.5px);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+            }
+            
+            #modal .title {
+                padding-left: 10px;
+                display: inline;
+                text-shadow: 1px 1px 2px gray;
+                color: white;
+                
+            }
+            #modal .title h2 {
+                display: inline;
+            }
+            #modal .close-area {
+                display: inline;
+                float: right;
+                padding-right: 10px;
+                cursor: pointer;
+                text-shadow: 1px 1px 2px gray;
+                color: white;
+            }
+            
+            #modal .content {
+                margin-top: 20px;
+                padding: 0px 10px;
+                text-shadow: 1px 1px 2px gray;
+                color: white;
+            }
+        </style>
+    </head>
+
+     <!--id로 바꾸고, _대신 -쓰기, navbar이유? -->   
+    <body>
+        <div id="titlebar">
+                <a href="mainpage.html"><img src="./main-image/title.png", alt="농장 이름", width="300",width="300"></a>
+        </div>
+
+        <div id="navbar">
+            <div id="navbar-icon">
+                <a href="mainpage.html"><i class="fa-solid fa-house"></i></a>
+                <!--<i class="fa-solid fa-bars"></i>-->
+            </div>
+
+            <ul id="navbar-menu">
+                <li><a href="introduce.html">소개</a></li> <!--소개 페이지 따로-->
+                <li><a href="./product/product.php">제품</a></li>
+                <li><div class="dropdown">
+                    <span class="dropbtn_icon"><a href="#" onclick= "location.href = 'boardpage.html' " >게시판</a></span>
+                    <div class="dropdown-content">
+                      <a href="./board/notice/boardpage.html">공지사항</a>
+                      <a href="./board/Q&A/qnapage.html">Q&A</a>
+                    </div>
+                  </div></li>
+            </ul>
+
+            <ul id="navbar-login">
+                <li><a onclick="hasToken()">마이페이지</a></li>
+        </div>
+
+
+        <aside>
+            <div id="mypage-category">
+                <div id="category-order"><a href="mypage.html">주문 조회</a></div>
+                <div id="category-inquiry"><a href="./board/Q&A/qnapage.html">문의하기</a></div>
+            </div>
+        </aside>
+
+        <section id="sec">
+        </section>
+
+        <div style="clear:both;"></div> <!--하단과 분리-->
+        <hr/>
+        <div id="second-cat"> <!--모든 페이지에 추가-->
+            <div id="map"><h3>🔎오시는 길</h3>
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div id="daumRoughmapContainer1671524483104" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
+
+                <!--
+                    2. 설치 스크립트
+                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                -->
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1671524483104",
+                        "key" : "2d4ip",
+                        //"mapWidth" : "350",
+                        "mapHeight" : "175"
+                    }).render();
+                </script>
+                <h4>베리굿 농장, 제주시 조천읍 와흘리 2419-2 </h4>
+                </div>
+            </div>
+        
+            <div id="copyright">
+                <p><br><br>📞TEL : 010-9964-8294</p>
+                <p>💰계좌 정보 : 농협 352-0944-0792-53 장주영</p>
+                <img src="./main-image/title.png">
+                <address>
+                Copyright &copy, BERRYGOOD ALL. rights resevered<br>
+                tre021040@naver.com<br><br>
+                이용약관 <span id="personal-info"><a href="#개인정보">개인정보 처리방침</a></span>
+            </address>
+        </div>
+    </body>
+    <script src="./mypage.js"></script>
+</html>

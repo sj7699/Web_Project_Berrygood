@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="purchase.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="navbar_name">
+                <a href="mainpage.html"><h2>🍊베리 굿, 제주</h2></a>
+            </div>
+
+            <ul class="navbar_menu">
+                <li><a href="#소개">소개</a></li> <!--소개 페이지 따로-->
+                <li><a href="#제품">제품</a></li>
+                <li><a href="#게시판">게시판</a></li>
+            </ul>
+
+            <ul id="navbar-login">
+                <li><a onclick="hasToken()">마이페이지</a></li>
+                <li><a id = "btn-modal">로그인/회원가입</a></li>
+            </ul>
+        </nav>
+        <button class="btn2">hello</button>
+</body>
+
+    <script src = "purchase.js"></script>
+    <script>
+        function hasToken(){
+            fetch("http://3.36.62.87/user/api/is_login.php", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "origin" : "http://3.36.62.87",
+                },
+                body: JSON.stringify({
+                    "JWT" : window.localStorage.getItem('jwt'),
+                }),
+                
+            }).then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                console.log(window.localStorage.getItem("isAdmin"));
+                if (data.message == "no jwt token"){
+                    alert("로그인을 해주세요");
+                }
+                else{
+                    window.location.replace("mypage.html");
+                }
+                
+            
+            });
+            
+        }
+    </script>
+</html>

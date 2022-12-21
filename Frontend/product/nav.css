@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: 'Hahmlet-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar {
+    display: flex; /*세로 -> 가로*/
+    justify-content: space-between; /*박스 사이 공간*/
+    align-items: center; /*가운데 정렬*/
+    background-color:rgba(250, 207, 87, 0.89);
+    padding: 8px 12px;
+    position:sticky; /*메뉴바 sticky*/
+    top:0px;
+    z-index: 3;
+  }
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    margin:0;
+    font-family: 'Hahmlet-Regular';
+}
+
+.navbar_name{
+    margin-left:20px;
+    font-size:17px;
+}
+
+.navbar_menu{
+    list-style:none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 10px 65px;
+}
+
+.navbar_menu li a:hover{
+    color:#f76503
+}
+
+.navbar_menu li a{
+    font-size: 25px;
+}
+
+
+.navbar_login{
+    list-style:none;
+    display:flex;
+    padding-right:15px;
+    font-size:20px;
+}
+
+.navbar_login a:hover{
+    color:rgb(0, 162, 255);
+}

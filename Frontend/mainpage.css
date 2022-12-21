@@ -1,0 +1,317 @@
+@font-face {
+  font-family: 'Hahmlet-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (max-width:700px){ /*스크린 크기 700px까지는 아래 css코드 사용*/
+    #navbar{
+        padding:10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }   
+    #navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    #navbar-icon{
+        width: 100%;
+        position: relative;
+        left: 45%;
+        top:50%;
+    }
+    #navbar-login{
+        position: relative;
+        left: 40%;
+        top:50%;
+
+    }
+}
+
+
+#titlebar { /*제목(베리 굿,제주)*/
+  text-align: center;
+  background-color: white;
+  margin:0px;
+  border:0px;
+}
+
+#navbar { /*메뉴바*/
+    display: flex; /*세로 -> 가로*/
+    justify-content: space-between; /*박스 사이 공간*/
+    align-items: center; /*가운데 정렬*/
+    background-color:white;
+    border: 1px solid #d3d3d3;
+  
+ 
+    position:sticky; /*메뉴바 sticky*/
+    top:0px; /*sticky 시작 지점*/
+    z-index: 3; /*우선순위 1*/
+  }
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    margin:0px;
+    font-family: 'Hahmlet-Regular';
+}
+
+#navbar-icon{ /*메뉴바의 첫번째 icon*/
+    font-size:25px;
+    width:15%;
+    margin-left:20px;
+    text-align: left;
+}
+
+#navbar-menu{ /*메뉴바의 두번째 (소개, 제품, 게시판)*/
+    list-style:none;
+    display: flex;
+    margin: 0px;
+}
+
+#navbar-menu li{
+    font-size:18px;
+    padding: 20px;
+
+}
+
+#navbar-menu li a:hover{ /*마우스 올려두면 회색*/
+  color:#d3d3d3;
+}
+
+#navbar-login a:hover{
+  color:#d3d3d3;
+  }
+
+
+#navbar-login{ /*메뉴바의 세번째 (로그인/로그아웃)*/
+    list-style:none;
+    width: 15%;
+    font-size:18px;
+    margin-right:20px;
+    text-align: right;
+}
+
+#introduce-image{ /*슬라이드 하단의 광고문구*/
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+/*여기서부터 수정* https://devinus.tistory.com/48/
+z-index주기*/
+.slide {
+  /* layout */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  user-select: none;
+  margin:0px;
+}
+.slide_item {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+
+  /* size */
+  width: 100%;
+  height: 700px;
+  flex-shrink: 0;
+  transition: left 0.15s;
+}
+.slide_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #cccc;
+  cursor: pointer;
+}
+
+.slide_prev_button {
+  left: 10px;
+}
+.slide_next_button {
+  right: 10px;
+}
+
+.slide_item.item1 {
+  background-color: white;
+}
+.slide_item.item2 {
+  background-color: white;
+}
+.slide_item.item3 {
+  background-color: white;
+}
+
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.slide_pagination {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slide_pagination > li {
+  color: #7fb5ff88;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.slide_pagination > li.active {
+  /* 현재 슬라이드 색상은 투명도 없이 */
+  color: #7fb5ff;
+}
+
+.slide_item_duplicate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  transition: left 0.15s;
+}
+
+.product{
+  display: flex;
+  flex-basis : 100%;
+  align-items: center;
+  color :rgb(99, 99, 99);
+  font-size: 30px;
+  margin: 30px 10px;
+}
+
+
+.product::after{
+  content: "";
+  flex-grow: 1;
+  background:rgb(99, 99, 99);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+}
+  
+
+
+.see_all_product{
+  color:black;
+  font-size:25px;
+  margin:30px;
+  text-align: center;
+  text-decoration: overline wavy rgb(102, 102, 102) 2.5px;
+}
+
+.see_all_product a:hover{
+  color:#f76503
+}
+
+#map h4{
+  text-align: center;
+  font-size:12px;
+}
+
+#map h3{
+  font-size: smaller;
+}
+
+#map{
+  padding-left:200px;
+  width:30%;
+  height:320px;
+  float:left;
+  text-align: center;
+}
+
+
+/*second-cat + info + map +tel를 전부 class -> id로 바꿈
+이용약관 추가*/
+
+#personal-info{
+  font-weight: bold;
+}
+#copyright{
+  text-align: left;
+  width:30%;
+  float:right;
+  font-size: 12px;
+  height:300px;
+  padding-right:200px;
+}
+
+#copyright img{
+  width:100px;
+}
+
+/*신태원 수정*/
+.dropdown{
+  position : absolute;
+  display : inline-block;
+}
+
+.dropbtn{
+  border : 1px solid rgb(37, 37, 37);
+  border-radius : 4px;
+  background-color: #f5f5f5;
+  font-weight: 400;
+  color : rgb(37, 37, 37);
+  padding : 12px;
+  width :200px;
+  text-align: left;
+  cursor : pointer;
+  font-size : 12px;
+}
+.dropdown-content{
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+  font-weight: 200;
+  background-color: #f9f9f9;
+  min-width : 200px;
+}
+
+.dropdown-content a{
+  display : block;
+  text-decoration : none;
+  color : rgb(37, 37, 37);
+  font-size: 15px;
+  padding : 12px 20px;
+}
+
+.dropdown-content a:hover{
+  background-color : #ececec
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
